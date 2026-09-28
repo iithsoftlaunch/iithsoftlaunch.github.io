@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Soft Launch — Coming soon</title>
+<meta name="robots" content="noindex" />
+<meta name="description" content="Coming soon." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Space+Mono&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --plum-0:#140A17; --rose:#FF5E7A; --rose-soft:#FF89A0; --gold:#EAC57D;
+    --blush:#FBEBE6; --mauve:#C7A2B8;
+  }
+  *{box-sizing:border-box;margin:0}
+  html,body{height:100%}
+  body{
+    min-height:100svh; display:grid; place-items:center; text-align:center;
+    padding:24px; color:var(--blush);
+    font-family:"Space Mono", ui-monospace, Menlo, monospace;
+    background:
+      radial-gradient(900px 600px at 78% -10%, rgba(255,94,122,0.20), transparent 60%),
+      radial-gradient(760px 520px at 10% 12%, rgba(234,197,125,0.12), transparent 55%),
+      radial-gradient(900px 800px at 50% 120%, rgba(255,137,160,0.12), transparent 60%),
+      var(--plum-0);
+    background-attachment:fixed; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:560px; animation:rise 1s cubic-bezier(.16,1,.3,1) both}
+  .mark{
+    font-family:"Fraunces", Georgia, serif; font-weight:500; font-size:clamp(30px,7vw,46px);
+    letter-spacing:-0.02em; color:var(--blush);
+  }
+  .mark b{color:var(--rose); font-style:italic; font-weight:500}
+  .soon{
+    font-family:"Fraunces", Georgia, serif; font-style:italic; font-weight:500;
+    font-size:clamp(40px,11vw,84px); line-height:1.05; letter-spacing:-0.03em; margin-top:22px;
+    background:linear-gradient(90deg,var(--gold),#FFF3D6,var(--rose-soft),var(--gold));
+    background-size:220% auto; -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+    animation:shimmer 5.5s linear infinite;
+  }
+  .sub{margin-top:26px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--mauve)}
+  .dot{display:inline-block; width:5px; height:5px; border-radius:50%; background:var(--gold); margin:0 8px; vertical-align:middle}
+  @keyframes shimmer{to{background-position:220% center}}
+  @keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){.soon,.wrap{animation:none}}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="mark">soft <b>launch</b></div>
+    <div class="soon">Coming soon&hellip;</div>
+    <div class="sub">something quiet is on its way <span class="dot"></span> IIT Hyderabad</div>
+  </main>
+</body>
+</html>
